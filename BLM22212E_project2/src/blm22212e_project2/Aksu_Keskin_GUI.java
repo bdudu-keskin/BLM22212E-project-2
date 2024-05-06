@@ -113,19 +113,11 @@ LinkedList<String> files = new LinkedList<String>();
         
         
         String file_path= selected.getAbsolutePath();
-         file_list.setText("<html><body>");
+        file_list.setText("<html><body>");
         files.addLast(file_path);
         files.forEach(x -> file_list.setText(file_list.getText() + x + "<br>\n")) ;
         file_list.setText(file_list.getText() + "</body></html>");
-        
-        
-                
-        
-        
-        
-        
-        
-        
+   
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void import_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_import_btnActionPerformed

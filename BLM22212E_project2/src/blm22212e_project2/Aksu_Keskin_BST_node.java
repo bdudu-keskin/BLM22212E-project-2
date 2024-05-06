@@ -37,4 +37,15 @@ public class Aksu_Keskin_BST_node {
         }
         fq_list.add(new Aksu_Keskin_fq_object(file));
     }
+    
+    
+    
+    public int sumFq(){
+        int sum = 0;
+        
+        for(int i = 0; i < fq_list.size(); i++){
+            sum += fq_list.get(i).frequancy;
+        }
+        return sum;
+    }
 }

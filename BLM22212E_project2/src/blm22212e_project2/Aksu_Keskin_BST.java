@@ -106,7 +106,7 @@ public class Aksu_Keskin_BST {
         if(root == null){
             return "";
         }
-        return _postOr(root.left) + _postOr(root.right) + root.word + ", \n";
+        return _postOr(root.left) + _postOr(root.right) + root.word + " " + root.sumFq() + ", <br>";
     }
     
 //------------------------------------------------------------------------------   
@@ -122,7 +122,7 @@ public class Aksu_Keskin_BST {
         if(root == null){
             return "";
         }
-        return root.word + ", \n" + _preOr(root.left) + _preOr(root.right);
+        return root.word + " " + root.sumFq() + ", <br>" + _preOr(root.left) + _preOr(root.right);
     }
     
 //------------------------------------------------------------------------------   
@@ -138,6 +138,6 @@ public class Aksu_Keskin_BST {
         if(root == null){
             return "";
         }
-        return _inOr(root.left) + root.word + ", \n" + _inOr(root.right);
+        return _inOr(root.left) + root.word + " " + root.sumFq() + ", <br>" + _inOr(root.right);
     }
 }
