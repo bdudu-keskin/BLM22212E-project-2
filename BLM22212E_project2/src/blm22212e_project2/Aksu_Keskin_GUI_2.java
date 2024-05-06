@@ -10,6 +10,8 @@ package blm22212e_project2;
  */
 public class Aksu_Keskin_GUI_2 extends javax.swing.JFrame {
 
+    Aksu_Keskin_BST tree;
+
     /**
      * Creates new form Aksu_Keskin_GUI_2
      */
@@ -26,21 +28,82 @@ public class Aksu_Keskin_GUI_2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        preon = new javax.swing.JButton();
+        inorder = new javax.swing.JButton();
+        postorder = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        results = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        preon.setText("pre-order");
+        preon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                preonActionPerformed(evt);
+            }
+        });
+
+        inorder.setText("in-order");
+        inorder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inorderActionPerformed(evt);
+            }
+        });
+
+        postorder.setText("post-order");
+        postorder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                postorderActionPerformed(evt);
+            }
+        });
+
+        jScrollPane1.setViewportView(results);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(preon)
+                .addGap(108, 108, 108)
+                .addComponent(inorder)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(postorder)
+                .addGap(111, 111, 111))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(preon, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                    .addComponent(inorder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(postorder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(209, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void inorderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inorderActionPerformed
+        results.setText(tree.inOr());
+
+    }//GEN-LAST:event_inorderActionPerformed
+
+    private void preonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_preonActionPerformed
+        results.setText(tree.preOr());
+    }//GEN-LAST:event_preonActionPerformed
+
+    private void postorderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_postorderActionPerformed
+        results.setText(tree.postOr());
+    }//GEN-LAST:event_postorderActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +141,10 @@ public class Aksu_Keskin_GUI_2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton inorder;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton postorder;
+    private javax.swing.JButton preon;
+    private javax.swing.JLabel results;
     // End of variables declaration//GEN-END:variables
 }

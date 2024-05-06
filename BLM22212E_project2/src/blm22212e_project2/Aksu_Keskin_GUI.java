@@ -129,8 +129,11 @@ LinkedList<String> files = new LinkedList<String>();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void import_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_import_btnActionPerformed
+        Aksu_Keskin_BST tree =  Aksu_Keskin_fileReader.turnListToTree(files);
        Aksu_Keskin_GUI_2 frame = new  Aksu_Keskin_GUI_2();
        frame.setVisible(true);
+       frame.tree = tree;
+       
     }//GEN-LAST:event_import_btnActionPerformed
 
     /**
