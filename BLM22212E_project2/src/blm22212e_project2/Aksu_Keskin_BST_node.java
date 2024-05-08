@@ -22,7 +22,7 @@ public class Aksu_Keskin_BST_node {
         this.word = word;
     }
     
-    
+//------------------------------------------------------------------------------    
     
     public void incFr(String file){
         if(fq_list.size() == 0){
@@ -38,7 +38,7 @@ public class Aksu_Keskin_BST_node {
         fq_list.add(new Aksu_Keskin_fq_object(file));
     }
     
-    
+ //------------------------------------------------------------------------------   
     
     public int sumFq(){
         int sum = 0;

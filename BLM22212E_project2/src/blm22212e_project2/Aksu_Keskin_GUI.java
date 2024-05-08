@@ -40,6 +40,7 @@ LinkedList<String> files = new LinkedList<String>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        search_txt.setActionCommand("<Not Set>");
         search_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 search_txtActionPerformed(evt);
@@ -106,6 +107,8 @@ LinkedList<String> files = new LinkedList<String>();
         // TODO add your handling code here:
     }//GEN-LAST:event_search_txtActionPerformed
 
+    
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         JFileChooser fc= new JFileChooser();
         fc.showOpenDialog(fc);
@@ -120,8 +123,10 @@ LinkedList<String> files = new LinkedList<String>();
    
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    
+    
     private void import_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_import_btnActionPerformed
-        Aksu_Keskin_BST tree =  Aksu_Keskin_fileReader.turnListToTree(files);
+       Aksu_Keskin_BST tree =  Aksu_Keskin_fileReader.turnListToTree(files);
        Aksu_Keskin_GUI_2 frame = new  Aksu_Keskin_GUI_2();
        frame.setVisible(true);
        frame.tree = tree;
