@@ -23,24 +23,6 @@ public class BLM22212E_project2 {
      */
     public static void main(String[] args) {
         
-        String data = "";
-        
-        try {
-            data = Aksu_Keskin_fileReader.readFileAsString("C:\\Users\\Asus\\Desktop\\dersler\\2-2\\data structures\\Project#2\\docs\\cse22510.html");
-        } catch (Exception ex) {
-            Logger.getLogger(BLM22212E_project2.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        LinkedList<String> ll = Aksu_Keskin_fileReader.sep_String(data);
-        Aksu_Keskin_BST bst = new Aksu_Keskin_BST();
-        
-        for(int i = 0; i < ll.size(); i++){
-            String temp = ll.get(i);
-            bst.add(temp).incFr("cse22510.html");
-        }
-        
-        System.out.println(bst.preOr());
-        System.out.println("");
-        System.out.println(bst.inOr());
+        (new Aksu_Keskin_GUI()).setVisible(true);
     }
 }
